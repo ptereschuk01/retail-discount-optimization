@@ -8,7 +8,7 @@ Retail companies frequently use discounts to increase sales. However, excessive 
 
 The analysis is based on retail sales data and includes an interactive dashboard that allows exploration of product performance under different discount levels.
 
-<img width="1543" height="701" alt="image" src="https://github.com/user-attachments/assets/b827b2df-cf8d-440e-b21c-ed4657ad7cc3" />
+<img width="1204" height="725" alt="image" src="https://github.com/user-attachments/assets/2c3d6129-7988-4a56-9ef0-faca60c4317d" />
 
 
 ---
