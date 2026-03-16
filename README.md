@@ -70,3 +70,71 @@ The project includes several stages of data analytics:
 - calculation of profit
 
 Profit formula:
+
+Profit = (Price_Discounted - Cost) × Qty
+
+
+---
+
+### Exploratory Data Analysis (EDA)
+
+The analysis focuses on the following relationships:
+
+- Discount vs Sales Quantity
+- Discount vs Profit
+- Product performance across categories
+
+---
+
+## Dashboard
+
+An interactive Excel dashboard was created to visualize the analysis results.
+
+Dashboard features:
+
+- product selection filter
+- visualization of sales quantity
+- visualization of profit
+- comparison of discount levels
+
+This allows users to quickly evaluate how discounts influence product performance.
+
+---
+
+## Key Insights
+
+The analysis shows several important patterns:
+
+- moderate discounts often increase sales volume
+- excessive discounts significantly reduce profit margins
+- profit typically reaches an optimal point at moderate discount levels
+
+This indicates that discount strategies should be optimized using data rather than intuition.
+
+---
+
+## Business Impact
+
+A data-driven discount strategy allows companies to:
+
+- optimize promotional campaigns
+- avoid unnecessary margin losses
+- improve pricing decisions
+- increase profitability
+
+---
+
+## Tools Used
+
+- Microsoft Excel
+- Pivot Tables
+- Data Analysis
+- Dashboard Visualization
+
+---
+
+## Conclusion
+
+This project demonstrates how data analytics can support pricing decisions in retail. By analyzing sales and profit under different discount levels, companies can identify optimal pricing strategies and make more informed business decisions.
+
+
