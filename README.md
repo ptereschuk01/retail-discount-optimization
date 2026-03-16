@@ -7,6 +7,7 @@ This project analyzes how price discounts influence product sales and profitabil
 Retail companies frequently use discounts to increase sales. However, excessive discounts can significantly reduce profit margins. The goal of this project is to analyze the relationship between discount levels, sales volume, and profit in order to identify the optimal discount strategy.
 
 The analysis is based on retail sales data and includes an interactive dashboard that allows exploration of product performance under different discount levels.
+<img width="1532" height="647" alt="image" src="https://github.com/user-attachments/assets/30087a67-2699-49a6-8464-5ac9daa7903f" />
 
 ---
 
