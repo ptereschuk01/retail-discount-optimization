@@ -1,36 +1,27 @@
-# Project Description
+# Projektbeschreibung
 
-## Retail Discount Optimization
+## Rabatt- und Ergebnisanalyse im Einzelhandel
 
-This project focuses on analyzing the impact of price discounts on sales performance and profitability in a retail environment.
+Das Projekt untersucht den Zusammenhang zwischen Rabattstufen, Absatzmenge und Rohertrag. Ein Python-Notebook erzeugt synthetische Verkaufsdaten auf Basis festgelegter Produkt-, Preis- und Nachfrageannahmen. Ein Excel-Dashboard stellt die Ergebnisse für den Vergleich einzelner Produktszenarien bereit.
 
-Retail companies frequently use discount strategies to increase product sales. However, if discounts are applied incorrectly, they can significantly reduce profit margins and lead to inefficient pricing strategies.
+### Fachliche Fragestellung
 
-The main objective of this project is to analyze how different discount levels affect:
+Eine Absatzsteigerung führt nicht automatisch zu einem höheren Ergebnis. Ein Preisnachlass verringert den Ertrag je Einheit; zusätzliche Verkäufe müssen diesen Effekt ausgleichen. Die Analyse macht diesen Zusammenhang anhand verschiedener Rabattstufen sichtbar.
 
-- product sales volume
-- revenue generation
-- overall profitability
+### Umsetzung
 
-The analysis is based on a structured dataset containing retail sales transactions.
+- Produktszenarien mit Einkaufskosten, Verkaufspreisen und angenommenen Nachfrageverläufen definieren.
+- Verkaufsdaten mit Python, pandas und NumPy erzeugen.
+- Rabattierten Preis und Rohertrag berechnen.
+- Ergebnisse nach Produkt und Rabattstufe aggregieren und visualisieren.
+- Kennzahlen in Excel über Pivot-Auswertungen und ein Dashboard zugänglich machen.
 
-The dataset includes information such as:
+Der Ergebnisbeitrag wird als `(rabattierter Preis − Einkaufskosten) × Absatzmenge` berechnet. Weitere betriebliche Kosten sind darin nicht enthalten.
 
-- sales date
-- store
-- product
-- category and subcategory
-- sales quantity
-- purchase cost
-- selling price
-- discount levels
-- discounted price
-- calculated profit
+### Ergebnis und Anwendungsgrenzen
 
-Using these data points, an exploratory data analysis was conducted to understand the relationship between pricing strategies and product performance.
+Das Ergebnis ist eine nachvollziehbare Szenarioanalyse mit interaktiver Auswertung. Die dargestellten Nachfrageeffekte folgen den gesetzten Annahmen; sie wurden nicht aus realen Handelstransaktionen geschätzt. Händlernamen im Notebook dienen ausschließlich als Simulationsbezeichnungen.
 
-The project also includes the creation of an interactive Excel dashboard. This dashboard enables users to analyze the effects of discount levels on individual products and compare sales and profit across different scenarios.
+Für einen Einsatz zur tatsächlichen Preissteuerung wären reale Daten, zusätzliche Kosten und eine gesonderte Validierung der Nachfrageeffekte notwendig.
 
-The results show that moderate discount levels tend to increase sales volume, but excessive discounts significantly reduce profit margins. This demonstrates the importance of using data-driven pricing strategies.
-
-Overall, the project illustrates how data analytics can support better decision-making in retail pricing and promotional strategy.
+[Dashboard und vollständige Dokumentation](README.md)
