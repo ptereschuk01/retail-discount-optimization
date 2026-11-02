@@ -1,14 +1,13 @@
-# Project Summary
+# Projektübersicht
 
-Retail Discount Optimization Analysis
+**Rabatt- und Ergebnisanalyse im Einzelhandel**
 
-This project analyzes the impact of discount strategies on product sales and profitability in retail.
+Python-basierte Szenarioanalyse mit einem interaktiven Excel-Dashboard. Synthetische Verkaufsdaten bilden definierte Nachfrageannahmen ab und ermöglichen den Vergleich von Absatz und Rohertrag bei verschiedenen Rabattstufen.
 
-Using a structured sales dataset, the analysis explores the relationship between discount levels, sales volume, and profit. An interactive Excel dashboard was created to visualize product performance and evaluate the effectiveness of different discount strategies.
+**Umsetzung:** Datengenerierung, Kennzahlenberechnung, Aggregation, Visualisierung und Dashboard.
 
-The results demonstrate that moderate discounts can increase sales, while excessive discounts significantly reduce profit margins.
+**Ergebnis:** Vergleichbare Produktszenarien, die den Zusammenhang zwischen Absatz, Preisnachlass und Ertrag je Einheit sichtbar machen. Die Ergebnisse gelten für die Modellannahmen und belegen keine tatsächliche Gewinnsteigerung.
 
-Tools used:
-- Microsoft Excel
-- Pivot Tables
-- Dashboard Visualization
+**Werkzeuge:** Python, pandas, NumPy, matplotlib, Excel und Pivot-Tabellen.
+
+[Projekt öffnen](README.md)
