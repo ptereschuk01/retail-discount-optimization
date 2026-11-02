@@ -1,143 +1,55 @@
-# Retail Discount Optimization Analysis
+# Rabatt- und Ergebnisanalyse im Einzelhandel
 
-## Overview
+Szenarioanalyse mit Python und einem interaktiven Excel-Dashboard. Untersucht wird, wie sich verschiedene Rabattstufen unter definierten Nachfrageannahmen auf Absatz und Rohertrag auswirken.
 
-This project analyzes how price discounts influence product sales and profitability in retail.
+**Leitfrage:** Welche Rabattstufe erzielt innerhalb eines gegebenen Produktszenarios den höchsten Rohertrag?
 
-Retail companies frequently use discounts to increase sales. However, excessive discounts can significantly reduce profit margins. The goal of this project is to analyze the relationship between discount levels, sales volume, and profit in order to identify the optimal discount strategy.
+[Excel-Arbeitsmappe öffnen](retail-discount-optimization.xlsx) · [Python-Notebook öffnen](Kaufland_Sdeka_Penetration.ipynb)
 
-The analysis is based on retail sales data and includes an interactive dashboard that allows exploration of product performance under different discount levels.
+<img width="1204" height="725" alt="Excel-Dashboard zur Analyse von Absatz und Ergebnis nach Rabattstufe" src="https://github.com/user-attachments/assets/2c3d6129-7988-4a56-9ef0-faca60c4317d" />
 
-<img width="1204" height="725" alt="image" src="https://github.com/user-attachments/assets/2c3d6129-7988-4a56-9ef0-faca60c4317d" />
+## Datenbasis und Modellannahmen
 
+Die Daten werden im Notebook synthetisch erzeugt. Produktpreise, Einkaufskosten und Nachfrageverläufe sind vorgegebene Szenarioannahmen. Im Notebook verwendete Händlernamen dienen der Simulation und bezeichnen keine bereitgestellten Unternehmensdaten.
 
----
+Berücksichtigt werden mehrere Produktgruppen, Filialen und Rabattstufen. Die Datensätze umfassen Datum, Produkt, Kategorie, Absatzmenge, Einkaufskosten, Ausgangspreis, Rabatt und berechnetes Ergebnis.
 
-## Business Problem
+## Analyseschritte
 
-Retail companies often apply discount campaigns to stimulate demand. While discounts can increase sales volume, they may also significantly reduce profit margins.
+1. Produktszenarien und Rabattstufen definieren.
+2. Absatzmengen anhand der angenommenen Nachfrageverläufe erzeugen.
+3. Rabattierten Verkaufspreis und Ergebnisbeitrag berechnen.
+4. Ergebnisse mit pandas aggregieren und mit matplotlib vergleichen.
+5. Kennzahlen im Excel-Dashboard nach Produkt und Rabattstufe untersuchen.
 
-The key business question addressed in this project is:
+Die verwendete Berechnung lautet:
 
-**Which discount level maximizes profit while maintaining strong sales performance?**
+```text
+Rabattierter Preis = Ausgangspreis × (1 − Rabatt / 100)
+Rohertrag = (Rabattierter Preis − Einkaufskosten je Stück) × Absatzmenge
+```
 
-Without data-driven analysis, companies may face:
-
-- unnecessary margin losses
-- inefficient promotions
-- suboptimal pricing strategies
-
----
-
-## Project Goal
-
-The goal of this project is to analyze the relationship between:
-
-- discount levels
-- sales quantity
-- profit
-
-and identify the discount level that maximizes overall profitability.
-
----
-
-## Dataset
-
-The dataset contains retail sales transactions with the following fields:
-
-| Column | Description |
-|------|-------------|
-| Date | Sales date |
-| Store | Store location |
-| Product | Product name |
-| Category | Product category |
-| SubCategory | Product subcategory |
-| Qty | Quantity sold |
-| Cost | Purchase cost |
-| Price | Original price |
-| Discount | Applied discount |
-| Price_Discounted | Price after discount |
-| Profit | Total profit |
-
----
-
-## Analysis Steps
-
-The project includes several stages of data analytics:
-
-### Data Preparation
-
-- validation of dataset structure
-- checking for missing values
-- calculation of discounted price
-- calculation of profit
-
-Profit formula:
-
-Profit = (Price_Discounted - Cost) × Qty
-
-
----
-
-### Exploratory Data Analysis (EDA)
-
-The analysis focuses on the following relationships:
-
-- Discount vs Sales Quantity
-- Discount vs Profit
-- Product performance across categories
-
----
+Das in den Dateien als `Profit` bezeichnete Ergebnis berücksichtigt Einkaufskosten, jedoch keine weiteren Betriebs- oder Aktionskosten. Es wird hier deshalb als Rohertrag eingeordnet.
 
 ## Dashboard
 
-An interactive Excel dashboard was created to visualize the analysis results.
+Die Excel-Arbeitsmappe stellt Absatz und Ergebnis nach Rabattstufen dar. Produktauswahl und visuelle Vergleiche unterstützen die Untersuchung des Zielkonflikts zwischen höherem Absatz und geringerem Ertrag je Einheit.
 
-Dashboard features:
+## Aussage der Analyse
 
-- product selection filter
-- visualization of sales quantity
-- visualization of profit
-- comparison of discount levels
+Das Projekt zeigt, wie Nachfrageannahmen und Margen gemeinsam die Bewertung einer Rabattaktion beeinflussen. Eine rechnerisch optimale Rabattstufe gilt jeweils für das gewählte Szenario.
 
-This allows users to quickly evaluate how discounts influence product performance.
+Die Ergebnisse sind keine empirische Schätzung realer Nachfrage und kein Nachweis einer erzielten Gewinnsteigerung. Für eine betriebliche Anwendung wären tatsächliche Transaktionsdaten, eine belastbare Nachfrageanalyse und weitere relevante Kosten einzubeziehen.
 
----
+## Dateien und Werkzeuge
 
-## Key Insights
+| Datei | Zweck |
+| --- | --- |
+| [Python-Notebook](Kaufland_Sdeka_Penetration.ipynb) | Datengenerierung und Szenarioanalyse |
+| [Excel-Arbeitsmappe](retail-discount-optimization.xlsx) | Dashboard und Auswertungen |
+| [Projektbeschreibung](project_description.md) | Fachlicher Ansatz |
+| [Kurzfassung](project_summary.md) | Kompakte Projektübersicht |
 
-The analysis shows several important patterns:
+**Werkzeuge:** Python · pandas · NumPy · matplotlib · Excel · Pivot-Tabellen
 
-- moderate discounts often increase sales volume
-- excessive discounts significantly reduce profit margins
-- profit typically reaches an optimal point at moderate discount levels
-
-This indicates that discount strategies should be optimized using data rather than intuition.
-
----
-
-## Business Impact
-
-A data-driven discount strategy allows companies to:
-
-- optimize promotional campaigns
-- avoid unnecessary margin losses
-- improve pricing decisions
-- increase profitability
-
----
-
-## Tools Used
-
-- Microsoft Excel
-- Pivot Tables
-- Data Analysis
-- Dashboard Visualization
-
----
-
-## Conclusion
-
-This project demonstrates how data analytics can support pricing decisions in retail. By analyzing sales and profit under different discount levels, companies can identify optimal pricing strategies and make more informed business decisions.
-
-
+[Profil und weitere Projekte](https://github.com/ptereschuk01)
